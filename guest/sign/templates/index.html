@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Django Page</title>
+    </head>
+    <body class=" login" data-admin-utc-offset="28800">
+        <h1>发布会管理系统</h1>
+        <!--action 属性指定提交的目录 -->
+        <form method="post" action="/login_action/">
+            <input name="username" type="text" placeholder="username" ><br>
+            <input name="password" type="password" placeholder="password"><br>
+            {{ error }}<br>
+            <button id="btn" type="submit">登录</button>
+            {% csrf_token %}
+        </form>
+    </body>
+</html>
